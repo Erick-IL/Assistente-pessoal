@@ -1,6 +1,5 @@
-# Ouvir e detectar palavra-chave → Usar SpeechRecognition ou Vosk.
-
 import speech_recognition as sr
+# Ouvir e detectar palavra-chave → Usar SpeechRecognition ou Vosk.
 
 rec = sr.Recognizer() # inicialize recognizer
 
@@ -17,8 +16,6 @@ with sr.Microphone() as mic:
                 print('Olá para você também')
                 break
             
-
-
         except sr.UnknownValueError:
                 continue
         except sr.RequestError:
