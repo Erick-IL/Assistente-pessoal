@@ -6,9 +6,21 @@ rec = sr.Recognizer() # inicialize recognizer
 
 with sr.Microphone() as mic:
     rec.adjust_for_ambient_noise(mic) # remove ambient noise
-    audio = rec.listen(mic) # record audio 
-    try:
-        text = rec.recognize_google(audio, language="pt-BR") # rocognize words in audio
-        print(text)
-    except:
-        print('Desculpe, não consegui escutar')
+    while True:
+        audio = rec.listen(mic, phrase_time_limit=1) # record audio 
+
+        try:
+            text = rec.recognize_google(audio, language="pt-BR")
+            print(text)
+
+            if 'olá' in text.lower():
+                print('Olá para você também')
+                break
+            
+
+
+        except sr.UnknownValueError:
+                continue
+        except sr.RequestError:
+                print("Erro de comunicação com o serviço de reconhecimento.")
+                break
