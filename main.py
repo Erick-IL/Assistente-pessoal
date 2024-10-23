@@ -1,3 +1,6 @@
-# Criar uma assistente para o comutador 
-    # com reconhecimento de voz e que possa fazer tarefas basicas no computador
+# Interpretar comandos → Usar spaCy ou transformers.
+# Executar comandos do sistema → Usar os, pyautogui, e subprocess.
+# Falar respostas → Usar pyttsx3 ou gTTS.
+# Memória limitada → Usar SQLite ou TinyDB.
+
 
