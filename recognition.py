@@ -9,7 +9,7 @@ class recognizer():
         with sr.Microphone() as mic:
             self.rec.adjust_for_ambient_noise(mic) # remove ambient noise
             while True:
-                audio = self.rec.listen(mic, phrase_time_limit=1) # record audio
+                audio = self.rec.listen(mic) # record audio
                 try:
                     text = self.rec.recognize_google(audio, language="pt-BR")
                     print(text)
@@ -26,7 +26,7 @@ class recognizer():
                 
      def wait_question(self):
         with sr.Microphone() as mic: 
-                 self.rec.adjust_for_ambient_noise()
+                 self.rec.adjust_for_ambient_noise(mic)
                  audio = self.rec.listen(mic)
                  try:
                     text = self.rec.recognize_google(audio, language="pt-BR")

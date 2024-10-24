@@ -1,6 +1,5 @@
 # Interpretar Perguntas ->
 import google.generativeai as genai
-import os
 
 class Ia_Intepreter():
     def __init__(self):      
@@ -9,7 +8,7 @@ class Ia_Intepreter():
 
     def response(self, question):
         response = self.model.generate_content(
-            question,
+            question + '(fale como se fosse uma conversação e não uma resposta em topicos)',
         )
         return response.text
 
