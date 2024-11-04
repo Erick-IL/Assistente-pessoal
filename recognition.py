@@ -14,7 +14,7 @@ class recognizer():
                     text = self.rec.recognize_google(audio, language="pt-BR")
                     print(text)
 
-                    if 'olá' in text.lower():
+                    if 'roger' in text.lower():
                         print('Olá para você também')
                         break
                     
