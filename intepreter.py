@@ -1,9 +1,11 @@
 # Interpretar Perguntas ->
 import google.generativeai as genai
-
+from dotenv import load_dotenv
+import os
 class Ia_Intepreter():
-    def __init__(self):      
-        genai.configure(api_key="AIzaSyC9bsa8KqT2Y7rv9L93VmT48TghLWlUQTY")
+    def __init__(self):     
+        load_dotenv()
+        genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
         self.model = genai.GenerativeModel("gemini-1.5-flash")
 
     def response(self, question):
