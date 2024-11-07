@@ -6,7 +6,6 @@ class Call_TTS():
         voices = self.TTS.getProperty('voices')
         self.TTS.setProperty('voice', voices[1].id)
 
-    def falar(self, text):
+    def speak(self, text):
         self.TTS.say(text)
         self.TTS.runAndWait()
-
