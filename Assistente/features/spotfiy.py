@@ -1,6 +1,6 @@
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
-from funcions.recognition import recognizer
+from Assistente.core.recognition import recognizer
 import spotipy
 import os
 import re

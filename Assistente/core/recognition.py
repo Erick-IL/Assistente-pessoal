@@ -1,6 +1,6 @@
 import speech_recognition as sr
-from funcions.intepreter import Ia_Intepreter
-from funcions.tts import Call_TTS
+from Assistente.core.intepreter import Ia_Intepreter
+from Assistente.core.tts import Call_TTS
 # Ouvir e detectar palavra-chave → Usar SpeechRecognition.
 
 class recognizer():
