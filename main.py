@@ -1,7 +1,7 @@
-import funcions.recognition as recognition
-import funcions.intepreter as intepreter
-from funcions.spotfiy import SpotifyController 
-import funcions.tts as tts
+import Assistente.core.recognition as recognition
+import Assistente.core.intepreter as intepreter
+from Assistente.features.spotfiy import SpotifyController 
+import Assistente.core.tts as tts
 # Executar comandos do sistema → Usar os, pyautogui, e subprocess.
 class virtual_assistant():
     def __init__(self):       
